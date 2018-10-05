@@ -4,6 +4,8 @@ library(stringr)
 library(tidyverse)
 library(quanteda)
 library(wordcloud)
+library(pathways)
+
 set.seed(1337)
 
 
@@ -305,10 +307,10 @@ a("carstenschwemmer.com", href = "https://www.carstenschwemmer.com"))
 server <- function(input, output, session) {
 
 
-  withProgress(message = 'Please wait, loading 467.503 questions...',
-               value = 1, {
-                 data(pathways_corpus)
-               })
+  # withProgress(message = 'Please wait, loading 467.503 questions...',
+  #              value = 1, {
+  #
+  #              })
 
 
   options(warn = -1)
