@@ -307,12 +307,6 @@ a("carstenschwemmer.com", href = "https://www.carstenschwemmer.com"))
 server <- function(input, output, session) {
 
 
-  # withProgress(message = 'Please wait, loading 467.503 questions...',
-  #              value = 1, {
-  #
-  #              })
-
-
   options(warn = -1)
   Sys.setenv(LANG = "en")
 
