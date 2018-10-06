@@ -61,7 +61,7 @@ knitr::kable(df)
 After loading the pathways package you can launch the shiny app in your browser to explore the corpus:
 
 ```{r, eval = FALSE}
-explore_corpus()
+corpus_explorer()
 ```
 
 <img src="../man/figures/app_interface.png" width="800">

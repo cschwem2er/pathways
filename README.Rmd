@@ -15,8 +15,9 @@ knitr::opts_chunk$set(
 
 
  
-# <img align="right;" src="man/figures/logo.png" width="120">  
+# pathways <img src="man/figures/logo.png" align="right" />
 
+[![CRAN status](https://www.r-pkg.org/badges/version/pathways?color=lightgrey)](https://cran.r-project.org/package=pathways)
 
 
 This app enables interactive exploration of the **Pathways Corpus** for studying the political representation of Citizens of Immigrant Origin. It includes parliamentary written questions from democracies of eight European countries: Belgium, France, Germany, Greece, Italy, Netherlands, Spain, and the United Kingdom.
@@ -47,14 +48,14 @@ After loading the pathways package you can launch the shiny app in your browser 
 
 ```{r, eval = FALSE}
 library(pathways)
-explore_corpus()
+corpus_explorer()
 ```
 
-<img src="man/figures/app_interface.png" width="800">
+<img src="man/figures/app_interface.png" width="800"/>
 
 The app can be used to filter corpora by several attributes and for visualizing high frequency / high keyness terms:
 
-<img src="man/figures/app_keyness.png" width="400">
+<img src="man/figures/app_keyness.png" width="400"/>
 
 ## Citation
 
