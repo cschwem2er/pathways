@@ -1,21 +1,19 @@
 ---
-output: github_document
+title: "Introduction to the Pathways Corpus"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Vignette Title}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
 ---
 
-<!-- README.md is generated from README.Rmd. Please edit that file -->
-
-```{r, echo = FALSE}
+```{r setup, include = FALSE}
 knitr::opts_chunk$set(
   collapse = TRUE,
-  comment = "#>",
-  fig.path = "README-"
+  comment = "#>"
 )
 ```
 
-
-
- 
-# <img align="right;" src="man/figures/logo.png" width="120">  
 
 
 
@@ -42,25 +40,32 @@ df <- data.frame(name, country, term)
 knitr::kable(df)
 ```
 
+Parliamentary written questions are stored in a data frame for each country with all textual data encoded as 'UTF-8'. Here are some questions including metadata for the German Bundestag, 2009-2013:
+
+```{r, eval = FALSE}
+library(pathways)
+head(de)
+```
+```{r, include = FALSE}
+library(pathways)
+df <- head(de, 3)
+```
+
+
+```{r, results = 'asis', echo = FALSE}
+
+knitr::kable(df)
+```
+
 
 After loading the pathways package you can launch the shiny app in your browser to explore the corpus:
 
 ```{r, eval = FALSE}
-library(pathways)
 explore_corpus()
 ```
 
-<img src="man/figures/app_interface.png" width="800">
+<img src="../man/figures/app_interface.png" width="800">
 
 The app can be used to filter corpora by several attributes and for visualizing high frequency / high keyness terms:
 
-<img src="man/figures/app_keyness.png" width="400">
-
-## Citation
-
-A reference for the Pathways Corpus is currently in preparation. For now, please cite the following reference if you use this package for your publications:
-
-```
-  Carsten Schwemmer (2018). pathways: A 'Shiny' Application for Exploring the Pathways Corpus. R package version 1.0.0.
-  https://github.com/methodds/pathways
-```
+<img src="../man/figures/app_keyness.png" width="400">

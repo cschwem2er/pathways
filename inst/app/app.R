@@ -10,20 +10,21 @@ set.seed(1337)
 
 
 ui <- fluidPage(
-
-
   # Application title
-  titlePanel(p( img(
-    src = "logo.png",
-    height = 60,
-    width = 120
-  ), "Pathways Corpus - Political Representation of Citizens of Immigrant Origin")),
+  titlePanel(
+    p(
+      img(
+        src = "logo.png",
+        height = 60,
+        width = 120
+      ),
+      "Pathways Corpus - Political Representation of Citizens of Immigrant Origin"
+    )
+  ),
 
 
   sidebarLayout(
     sidebarPanel(
-
-
       #select country
       selectInput(
         "country",
@@ -164,7 +165,7 @@ ui <- fluidPage(
       ),
       bsTooltip(
         "method",
-        "Whether to select terms by frequency or keyness scores which are measured by chi2 tests with Yates correction.",
+        "Whether to select terms by frequency or keyness scores.",
         placement = "right",
         options = list(container = "body")
       ),
@@ -263,38 +264,41 @@ ui <- fluidPage(
 
 
     mainPanel(
-
-
       # show dataframe
       h2("Data Inspector"),
       p("\n"),
       dataTableOutput('df_final'),
 
       # downloading the dataframe (disabled at the moment)
-     # downloadButton('downloadData', 'Download the dataset'),
+      # downloadButton('downloadData', 'Download the dataset'),
 
       # show plot
       h2("Context Plot"),
 
 
       # show plot
-      plotOutput("cloudPlot", inline=TRUE),
+      plotOutput("cloudPlot", inline = TRUE),
 
-           #   width = "100%",
-           #    height = "700px"),
+      #   width = "100%",
+      #    height = "700px"),
 
-     p(
-       "This plot
-        will show terms with highest frequencies / keyness scores within the filtered corpus. Terms in lighter grey were used for filtering."
-     ),
-     downloadButton('downloadPlot', label="Download Plot")
-
-
-      )
+      p(
+        "This plot
+        will show terms with highest frequencies / ",
+        a("keyness", href = "https://rdrr.io/cran/quanteda/man/textstat_keyness.html",
+          target = "_blank"),
+        "scores within the filtered corpus. Terms in lighter grey were used for filtering."
       ),
+      downloadButton('downloadPlot', label = "Download Plot")
+
+
+    )
+    ),
   hr(),
-  p("Contact: Carsten Schwemmer, e-mail: c.schwem2er@gmail.com, webpage: ",
-a("carstenschwemmer.com", href = "https://www.carstenschwemmer.com"))
+  p(
+    "Contact: Carsten Schwemmer, e-mail: c.schwem2er@gmail.com, webpage: ",
+    a("carstenschwemmer.com", href = "https://www.carstenschwemmer.com", target = "_blank")
+  )
 )
 
 
@@ -305,8 +309,6 @@ a("carstenschwemmer.com", href = "https://www.carstenschwemmer.com"))
 
 
 server <- function(input, output, session) {
-
-
   options(warn = -1)
   Sys.setenv(LANG = "en")
 
@@ -380,7 +382,6 @@ server <- function(input, output, session) {
                       main,
                       rest,
                       min_len = 3) {
-
     # generates a term-document-frequency dataframe
 
     if (method == "freq") {
@@ -412,7 +413,8 @@ server <- function(input, output, session) {
       gr1 <- main %>%  mutate(reference = 0)
       gr2 <- rest %>%  mutate(reference = 1)
       combined <- bind_rows(gr1, gr2)
-      corpus_grouped <- corpus(str_to_lower(combined$text), docvars = combined)
+      corpus_grouped <-
+        corpus(str_to_lower(combined$text), docvars = combined)
       dfm_gr <- dfm(
         corpus_grouped,
         groups = "reference",
@@ -438,7 +440,6 @@ server <- function(input, output, session) {
 
 
   df <- reactive({
-
     req(input$country)
     switch(
       input$country,
@@ -608,7 +609,7 @@ server <- function(input, output, session) {
         colors = corpus$color,
         ordered.colors = TRUE,
         max.words = input$nrwords_,
-        random.order=input$order,
+        random.order = input$order,
         scale = c(input$scale1, input$scale2)
       )
     })
@@ -641,7 +642,7 @@ server <- function(input, output, session) {
       colors = corpus$color,
       ordered.colors = TRUE,
       max.words = input$nrwords_,
-      random.order=input$order,
+      random.order = input$order,
       scale = c(input$scale1, input$scale2)
     )
 
@@ -662,24 +663,27 @@ server <- function(input, output, session) {
         "Plot Error: Please enter at least one valid filter-word via the term dictionary."
       )
 
-      )
-    outfile <- tempfile(fileext='.png')
-    png(filename=outfile, width = 800, height = 600)
+    )
+    outfile <- tempfile(fileext = '.png')
+    png(filename = outfile,
+        width = 800,
+        height = 600)
     plotCloud()
     dev.off()
 
-    list(src = outfile,
-         width = 800,
-         height = 600,
-         contentType = 'image/png',
-         alt = "PathwaysWordcloud"
+    list(
+      src = outfile,
+      width = 800,
+      height = 600,
+      contentType = 'image/png',
+      alt = "PathwaysWordcloud"
     )
   }, deleteFile = FALSE)
 
 
   output$downloadPlot <- downloadHandler(
     filename = "pathways_cloud.pdf",
-    content = function(file){
+    content = function(file) {
       pdf(file)
       plotCloudDL()
       dev.off()

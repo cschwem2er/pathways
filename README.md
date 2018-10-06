@@ -1,16 +1,14 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
-Pathways Corpus
-===============
+<img align="right;" src="man/figures/logo.png" width="120">
+===========================================================
 
-<img src="man/figures/logo.png" width="100">
-
-This app enables interactive exploration of the Pathways Corpus for studying the political representation of Citizens of Immigrant Origin. It includes parliamentary written questions from democracies of eight European countries: Belgium, France, Germany, Greece, Italy, Netherlands, Spain, and the United Kingdom.
+This app enables interactive exploration of the **Pathways Corpus** for studying the political representation of Citizens of Immigrant Origin. It includes parliamentary written questions from democracies of eight European countries: Belgium, France, Germany, Greece, Italy, Netherlands, Spain, and the United Kingdom.
 
 How to Install
 --------------
 
-You can download and install the latest development version of the app by running `devtools::install_github('methodds/pathways')`.
+You can download and install the latest development version of the app with the devtools package by running `devtools::install_github('methodds/pathways')`.
 
 For Windows users installing from github requires proper setup of [Rtools](https://cran.r-project.org/bin/windows/Rtools/), for which a tutorial is available [here](https://github.com/stan-dev/rstan/wiki/Install-Rtools-for-Windows).
 
@@ -32,7 +30,7 @@ This package includes all datasets of the Pathways Corpus:
 | nl   | Netherlands    | 2010-2012 |
 | uk   | United Kingdom | 2010-2015 |
 
-After loading pathways you can launch the shiny app in your browser to explore the corpus:
+After loading the pathways package you can launch the shiny app in your browser to explore the corpus:
 
 ``` r
 library(pathways)
