@@ -16,7 +16,7 @@ Netherlands, Spain, and the United Kingdom.
 
 You can download and install the latest development version of the app
 with the devtools package by running
-`devtools::install_github('methodds/pathways')`.
+`devtools::install_github('cschwem2er/pathways')`.
 
 For Windows users installing from github requires proper setup of
 [Rtools](https://cran.r-project.org/bin/windows/Rtools/), for which a
@@ -65,5 +65,5 @@ publications:
 
 ``` 
   Carsten Schwemmer (2018). pathways: A 'Shiny' Application for Exploring the Pathways Corpus. R package version 1.0.0.
-  https://github.com/methodds/pathways
+  https://github.com/cschwem2er/pathways
 ```
