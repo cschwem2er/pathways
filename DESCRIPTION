@@ -1,8 +1,8 @@
 Package: pathways
 Type: Package
 Title: A 'Shiny' Application for Exploring the Pathways Corpus
-Version: 1.0.0
-Date: 2018-10-08
+Version: 1.0.1
+Date: 2018-12-14
 Authors@R: person("Carsten", "Schwemmer", email = "c.schwem2er@gmail.com", comment = c(ORCID = "0000-0001-9084-946X"), role = c("aut", "cre"))
 URL: https://github.com/cschwem2er/pathways
 BugReports: https://github.com/cschwem2er/pathways/issues
@@ -20,7 +20,7 @@ Imports:
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
-RoxygenNote: 6.0.1
+RoxygenNote: 6.1.0
 Suggests: knitr,
     rmarkdown
 VignetteBuilder: knitr

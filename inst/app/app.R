@@ -13,13 +13,15 @@ ui <- fluidPage(
   # Application title
   titlePanel(
     p(
+
+      "Pathways - Corpus Explorer",
       img(
         src = "logo.png",
         height = 60,
         width = 120
-      ),
-      "Pathways Corpus - Political Representation of Citizens of Immigrant Origin"
-    )
+      )
+    ),
+    windowTitle = 'Pathways - Corpus Explorer'
   ),
 
 

@@ -11,7 +11,6 @@
   \item{name}{name of first MP}
   \item{mp_id}{identifier of MP}
   \item{party}{party of MP}
-  \item{cio}{Citizen of Immigrant Origin status of MP}
   \item{text}{text of written question}
   \item{title}{title of written question}
   \item{contributors}{names of other MPs}

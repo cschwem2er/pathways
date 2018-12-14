@@ -64,6 +64,6 @@ your
 publications:
 
 ``` 
-  Carsten Schwemmer (2018). pathways: A 'Shiny' Application for Exploring the Pathways Corpus. R package version 1.0.0.
+  Carsten Schwemmer (2018). pathways: A 'Shiny' Application for Exploring the Pathways Corpus. R package version 1.0.1.
   https://github.com/cschwem2er/pathways
 ```

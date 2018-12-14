@@ -1,3 +1,8 @@
+# pathways 1.0.1
+
+* removed CIO identifier for NL dataset because of data sharing agreements.
+
+
 # pathways 1.0.0
 
 * First release of the pathways package.
