@@ -5,12 +5,12 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>A 'Shiny' Application for Exploring the Pathways Corpus • pathways</title>
+<title>Introduction to the Pathways Corpus • pathways</title>
 <!-- jquery --><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script><!-- Bootstrap --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha256-916EbMg70RQy9LHiGkXzG8hSg9EdNy97GazNG/aiY1w=" crossorigin="anonymous">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous">
-<!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ=" crossorigin="anonymous"></script><!-- sticky kit --><script src="https://cdnjs.cloudflare.com/ajax/libs/sticky-kit/1.1.3/sticky-kit.min.js" integrity="sha256-c4Rlo1ZozqTPE2RLuvbusY3+SU1pQaJC0TjuhygMipw=" crossorigin="anonymous"></script><!-- pkgdown --><link href="pkgdown.css" rel="stylesheet">
-<script src="pkgdown.js"></script><meta property="og:title" content="A 'Shiny' Application for Exploring the Pathways Corpus">
-<meta property="og:description" content="This app enables interactive exploration of the Pathways Corpus for studying the political representation of Citizens of Immigrant Origin. It includes parliamentary written questions from democracies of eight European countries: Belgium, France, Germany, Greece, Italy, Netherlands, Spain, and the United Kingdom.">
+<!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ=" crossorigin="anonymous"></script><!-- sticky kit --><script src="https://cdnjs.cloudflare.com/ajax/libs/sticky-kit/1.1.3/sticky-kit.min.js" integrity="sha256-c4Rlo1ZozqTPE2RLuvbusY3+SU1pQaJC0TjuhygMipw=" crossorigin="anonymous"></script><!-- pkgdown --><link href="../pkgdown.css" rel="stylesheet">
+<script src="../pkgdown.js"></script><meta property="og:title" content="Introduction to the Pathways Corpus">
+<meta property="og:description" content="">
 <meta property="og:image" content="/logo.png">
 <meta name="twitter:card" content="summary">
 <!-- mathjax --><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js" integrity="sha256-84DKXVJXs0/F8OTMzX4UR909+jtl4G7SPypPavF+GfA=" crossorigin="anonymous"></script><!--[if lt IE 9]>
@@ -30,7 +30,7 @@
         <span class="icon-bar"></span>
       </button>
       <span class="navbar-brand">
-        <a class="navbar-link" href="index.html">pathways</a>
+        <a class="navbar-link" href="../index.html">pathways</a>
         <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.0.2</span>
       </span>
     </div>
@@ -38,13 +38,13 @@
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
 <li>
-  <a href="index.html">
+  <a href="../index.html">
     <span class="fa fa-home fa-lg"></span>
      
   </a>
 </li>
 <li>
-  <a href="reference/index.html">Reference</a>
+  <a href="../reference/index.html">Reference</a>
 </li>
 <li class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
@@ -54,12 +54,12 @@
   </a>
   <ul class="dropdown-menu" role="menu">
 <li>
-      <a href="articles/intro.html">Introduction to the Pathways Corpus</a>
+      <a href="../articles/intro.html">Introduction to the Pathways Corpus</a>
     </li>
   </ul>
 </li>
 <li>
-  <a href="news/index.html">Changelog</a>
+  <a href="../news/index.html">Changelog</a>
 </li>
       </ul>
 <ul class="nav navbar-nav navbar-right">
@@ -80,16 +80,17 @@
       
       </header><div class="row">
   <div class="col-md-9 contents">
-    
+    <div class="page-header toc-ignore">
+      <h1>Introduction to the Pathways Corpus</h1>
+            
+      
+      <small class="dont-index">Source: <a href="https://github.com/cschwem2er/pathways/blob/master/vignettes/intro.Rmd"><code>vignettes/intro.Rmd</code></a></small>
+      <div class="hidden name"><code>intro.Rmd</code></div>
+
+    </div>
 
     
     
-<!-- README.md is generated from README.Rmd. Please edit that file -->
-<div id="pathways" class="section level1">
-<div class="page-header"><h1 class="hasAnchor">
-<a href="#pathways" class="anchor"></a>pathways <img src="reference/figures/logo.png" align="right">
-</h1></div>
-
 <p>This app enables interactive exploration of the <strong>Pathways Corpus</strong> for studying the political representation of Citizens of Immigrant Origin. It includes parliamentary written questions from democracies of eight European countries: Belgium, France, Germany, Greece, Italy, Netherlands, Spain, and the United Kingdom.</p>
 <div id="how-to-install" class="section level2">
 <h2 class="hasAnchor">
@@ -102,7 +103,7 @@
 <h2 class="hasAnchor">
 <a href="#how-to-use" class="anchor"></a>How to Use</h2>
 <p>This package includes all datasets of the Pathways Corpus:</p>
-<table class="table table">
+<table class="table">
 <thead><tr class="header">
 <th align="left">name</th>
 <th align="left">country</th>
@@ -151,56 +152,71 @@
 </tr>
 </tbody>
 </table>
-<p>After loading the pathways package you can launch the shiny app in your browser to explore the corpus:</p>
+<p>Parliamentary written questions are stored in a data frame for each country with all textual data encoded as ‘UTF-8’. Here are some questions including metadata for the German Bundestag, 2009-2013:</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" data-line-number="1"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/library">library</a></span>(pathways)</a>
-<a class="sourceLine" id="cb1-2" data-line-number="2"><span class="kw"><a href="reference/corpus_explorer.html">corpus_explorer</a></span>()</a></code></pre></div>
-<p><img src="reference/figures/app_interface.png" width="800"></p>
+<a class="sourceLine" id="cb1-2" data-line-number="2"><span class="kw"><a href="https://www.rdocumentation.org/packages/utils/topics/head">head</a></span>(de)</a></code></pre></div>
+<table class="table">
+<thead><tr class="header">
+<th align="right">qid</th>
+<th align="left">qdate</th>
+<th align="left">name</th>
+<th align="left">mp_id</th>
+<th align="left">party</th>
+<th align="left">area</th>
+<th align="left">text</th>
+<th align="left">cio</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td align="right">1</td>
+<td align="left">2009-11-13</td>
+<td align="left">Bettina Margret Herlitzius</td>
+<td align="left">DE152132</td>
+<td align="left">90/GRÜNE</td>
+<td align="left">Verkehr, Bau und Stadtentwicklung</td>
+<td align="left">Welche Kostensteigerungen, ausgehend von veranschlagten 9,5 Mio. Euro noch im April 2008, gibt es für den Bau der Umgehungsstraße 57n westlich von Baesweiler – laut „Aachener Nachrichten“/„Aachener Zeitung“ Nordkreis am Montag, dem 26. Oktober 2009 veranschlagt der Landesbetrieb Straßenbau Nordrhein-Westfalen (NRW) (Niederlassung VilleEifel) die Gesamtkosten inzwischen auf 20 Mio. Euro –, und wie kamen diese zustande?</td>
+<td align="left">no</td>
+</tr>
+<tr class="even">
+<td align="right">63</td>
+<td align="left">2009-11-13</td>
+<td align="left">Steffen-Claudio Lemme</td>
+<td align="left">DE172107</td>
+<td align="left">SPD</td>
+<td align="left">Finanzen</td>
+<td align="left">Mit welchem Arbeitskräftebedarf (direkte und indirekte Arbeitsplätze) rechnet die Bundesregierung für die Kaliproduktion am Standort Roßleben insgesamt?</td>
+<td align="left">no</td>
+</tr>
+<tr class="odd">
+<td align="right">62</td>
+<td align="left">2009-11-13</td>
+<td align="left">Steffen-Claudio Lemme</td>
+<td align="left">DE172107</td>
+<td align="left">SPD</td>
+<td align="left">Finanzen</td>
+<td align="left">Sieht die Bundesregierung hinsichtlich der im Umfeld der Kalilagerstätte ausgewiesenen Naturschutz- sowie FFH-Gebiete (FFH = Fauna, Flora, Habitat) Probleme bei der Umsetzung des Projektes, und wenn ja, welche?</td>
+<td align="left">no</td>
+</tr>
+</tbody>
+</table>
+<p>After loading the pathways package you can launch the shiny app in your browser to explore the corpus:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" data-line-number="1"><span class="kw"><a href="../reference/corpus_explorer.html">corpus_explorer</a></span>()</a></code></pre></div>
+<p><img src="../man/figures/app_interface.png" width="800"></p>
 <p>The app can be used to filter corpora by several attributes and for visualizing high frequency / high keyness terms:</p>
-<p><img src="reference/figures/app_keyness.png" width="400"></p>
-</div>
-<div id="citation" class="section level2">
-<h2 class="hasAnchor">
-<a href="#citation" class="anchor"></a>Citation</h2>
-<p>A reference for the Pathways Corpus is currently in preparation. For now, please cite the following reference if you use this package for your publications:</p>
-<pre><code>  Carsten Schwemmer (2018). pathways: A 'Shiny' Application for Exploring the Pathways Corpus. R package version 1.0.1.
-  https://github.com/cschwem2er/pathways</code></pre>
-</div>
+<p><img src="../man/figures/app_keyness.png" width="400"></p>
 </div>
   </div>
 
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
-    <div class="links">
-<h2>Links</h2>
-<ul class="list-unstyled">
-<li>Browse source code at <br><a href="https://github.com/cschwem2er/pathways">https://​github.com/​cschwem2er/​pathways</a>
-</li>
-<li>Report a bug at <br><a href="https://github.com/cschwem2er/pathways/issues">https://​github.com/​cschwem2er/​pathways/​issues</a>
-</li>
-</ul>
+        <div id="tocnav">
+      <h2 class="hasAnchor">
+<a href="#tocnav" class="anchor"></a>Contents</h2>
+      <ul class="nav nav-pills nav-stacked">
+<li><a href="#how-to-install">How to Install</a></li>
+      <li><a href="#how-to-use">How to Use</a></li>
+      </ul>
 </div>
-<div class="license">
-<h2>License</h2>
-<ul class="list-unstyled">
-<li>
-<a href="https://opensource.org/licenses/mit-license.php">MIT</a> + file <a href="LICENSE-text.html">LICENSE</a>
-</li>
-</ul>
-</div>
-<div class="developers">
-<h2>Developers</h2>
-<ul class="list-unstyled">
-<li>
-<a href="https://www.carstenschwemmer.com">Carsten Schwemmer</a> <br><small class="roles"> Author, maintainer </small> <a href="https://orcid.org/0000-0001-9084-946X" target="orcid.widget"><img src="https://members.orcid.org/sites/default/files/vector_iD_icon.svg" class="orcid" alt="ORCID" height="16"></a> </li>
-</ul>
-</div>
-
-      <div class="dev-status">
-<h2>Dev status</h2>
-<ul class="list-unstyled">
-<li><a href="https://cran.r-project.org/package=pathways"><img src="https://www.r-pkg.org/badges/version/pathways?color=lightgrey" alt="CRAN status"></a></li>
-</ul>
-</div>
-</div>
+      </div>
 
 </div>
 
