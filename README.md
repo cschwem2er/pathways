@@ -3,6 +3,10 @@
 
 # pathways <img src="man/figures/logo.png" align="right" />
 
+[![Travis-CI Build
+Status](https://travis-ci.org/cschwem2er/pathways.svg?branch=master)](https://travis-ci.org/cschwem2er/pathways)
+[![AppVeyor Build
+Status](https://ci.appveyor.com/api/projects/status/github/cschwem2er/pathways?branch=master&svg=true)](https://ci.appveyor.com/project/cschwem2er/pathways)
 [![CRAN
 status](https://www.r-pkg.org/badges/version/pathways?color=lightgrey)](https://cran.r-project.org/package=pathways)
 
@@ -64,6 +68,6 @@ your
 publications:
 
 ``` 
-  Carsten Schwemmer (2018). pathways: A 'Shiny' Application for Exploring the Pathways Corpus. R package version 1.0.1.
+  Carsten Schwemmer (2019). pathways: A 'Shiny' Application for Exploring the Pathways Corpus. R package version 1.0.2.
   https://github.com/cschwem2er/pathways
 ```
