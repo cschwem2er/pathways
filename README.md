@@ -23,9 +23,7 @@ with the devtools package by running
 `devtools::install_github('cschwem2er/pathways')`.
 
 For Windows users installing from github requires proper setup of
-[Rtools](https://cran.r-project.org/bin/windows/Rtools/), for which a
-tutorial is available
-[here](https://github.com/stan-dev/rstan/wiki/Install-Rtools-for-Windows).
+[Rtools](https://cran.r-project.org/bin/windows/Rtools/).
 
 At the moment, pathways is not yet available on CRAN, but a submission
 is being prepared.
@@ -64,8 +62,7 @@ visualizing high frequency / high keyness terms:
 
 A reference for the Pathways Corpus is currently in preparation. For
 now, please cite the following reference if you use this package for
-your
-publications:
+your publications:
 
 ``` 
   Carsten Schwemmer (2019). pathways: A 'Shiny' Application for Exploring the Pathways Corpus. R package version 1.0.2.

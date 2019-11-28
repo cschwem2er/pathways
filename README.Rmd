@@ -28,7 +28,7 @@ This app enables interactive exploration of the **Pathways Corpus** for studying
 
 You can download and install the latest development version of the app with the devtools package by running ``devtools::install_github('cschwem2er/pathways')``.    
 
-For Windows users installing from github requires proper setup of [Rtools](https://cran.r-project.org/bin/windows/Rtools/), for which a tutorial is available [here](https://github.com/stan-dev/rstan/wiki/Install-Rtools-for-Windows).
+For Windows users installing from github requires proper setup of [Rtools](https://cran.r-project.org/bin/windows/Rtools/).
 
 At the moment, pathways is not yet available on CRAN, but a submission is being prepared.
 
