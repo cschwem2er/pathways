@@ -96,7 +96,7 @@
 <h2 class="hasAnchor">
 <a href="#how-to-install" class="anchor"></a>How to Install</h2>
 <p>You can download and install the latest development version of the app with the devtools package by running <code><a href="https://www.rdocumentation.org/packages/devtools/topics/reexports">devtools::install_github('cschwem2er/pathways')</a></code>.</p>
-<p>For Windows users installing from github requires proper setup of <a href="https://cran.r-project.org/bin/windows/Rtools/">Rtools</a>, for which a tutorial is available <a href="https://github.com/stan-dev/rstan/wiki/Install-Rtools-for-Windows">here</a>.</p>
+<p>For Windows users installing from github requires proper setup of <a href="https://cran.r-project.org/bin/windows/Rtools/">Rtools</a>.</p>
 <p>At the moment, pathways is not yet available on CRAN, but a submission is being prepared.</p>
 </div>
 <div id="how-to-use" class="section level2">
@@ -153,8 +153,8 @@
 </tbody>
 </table>
 <p>Parliamentary written questions are stored in a data frame for each country with all textual data encoded as ‘UTF-8’. Here are some questions including metadata for the German Bundestag, 2009-2013:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" data-line-number="1"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/library">library</a></span>(pathways)</a>
-<a class="sourceLine" id="cb1-2" data-line-number="2"><span class="kw"><a href="https://www.rdocumentation.org/packages/utils/topics/head">head</a></span>(de)</a></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/library">library</a></span>(pathways)</span>
+<span id="cb1-2"><a href="#cb1-2"></a><span class="kw"><a href="https://www.rdocumentation.org/packages/utils/topics/head">head</a></span>(de)</span></code></pre></div>
 <table class="table">
 <thead><tr class="header">
 <th align="right">qid</th>
@@ -200,7 +200,7 @@
 </tbody>
 </table>
 <p>After loading the pathways package you can launch the shiny app in your browser to explore the corpus:</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" data-line-number="1"><span class="kw"><a href="../reference/corpus_explorer.html">corpus_explorer</a></span>()</a></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a><span class="kw"><a href="../reference/corpus_explorer.html">corpus_explorer</a></span>()</span></code></pre></div>
 <p><img src="../man/figures/app_interface.png" width="800"></p>
 <p>The app can be used to filter corpora by several attributes and for visualizing high frequency / high keyness terms:</p>
 <p><img src="../man/figures/app_keyness.png" width="400"></p>
