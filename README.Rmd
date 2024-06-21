@@ -17,12 +17,16 @@ knitr::opts_chunk$set(
  
 # pathways <img src="man/figures/logo.png" align="right" />
 
-[![Travis-CI Build Status](https://travis-ci.org/cschwem2er/pathways.svg?branch=master)](https://travis-ci.org/cschwem2er/pathways)
+
 [![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/cschwem2er/pathways?branch=master&svg=true)](https://ci.appveyor.com/project/cschwem2er/pathways)
 [![CRAN status](https://www.r-pkg.org/badges/version/pathways?color=lightgrey)](https://cran.r-project.org/package=pathways)
 
 
 This app enables interactive exploration of the **Pathways Corpus** for studying the political representation of Citizens of Immigrant Origin. It includes parliamentary written questions from democracies of eight European countries: Belgium, France, Germany, Greece, Italy, Netherlands, Spain, and the United Kingdom.
+
+## No active maintenance
+
+Please note that this packages is not actively maintained any longer. The datasets will be functional in the future, but the corpus explorer may not work anymore.
 
 ## How to Install
 

@@ -4,7 +4,8 @@
 \name{be}
 \alias{be}
 \title{Pathways Corpus - Belgium}
-\format{A data frame including the following variables:
+\format{
+A data frame including the following variables:
 \describe{
   \item{qid}{identifier of written question}
   \item{qdate}{date of written question }
@@ -16,7 +17,8 @@
   \item{title}{title of written question}
   \item{area}{subject area of written question}
   \item{department}{adressed department of written question}
-}}
+}
+}
 \source{
 \url{https://www.lachambre.be/}
 }

@@ -4,7 +4,8 @@
 \name{nl}
 \alias{nl}
 \title{Pathways Corpus - Netherlands}
-\format{A data frame including the following variables:
+\format{
+A data frame including the following variables:
 \describe{
   \item{qid}{identifier of written question}
   \item{qdate}{date of written question }
@@ -14,7 +15,8 @@
   \item{text}{text of written question}
   \item{title}{title of written question}
   \item{contributors}{names of other MPs}
-}}
+}
+}
 \source{
 \url{https://zoek.officielebekendmakingen.nl/}
 }

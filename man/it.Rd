@@ -4,7 +4,8 @@
 \name{it}
 \alias{it}
 \title{Pathways Corpus - Italy}
-\format{A data frame including the following variables:
+\format{
+A data frame including the following variables:
 \describe{
   \item{qid}{identifier of written question}
   \item{qdate}{date of written question }
@@ -15,7 +16,8 @@
   \item{text}{text of written question}
   \item{contributors}{names of other MPs}
   \item{area}{subject area of written question}
-}}
+}
+}
 \source{
 \url{http://dati.camera.it/}
 }

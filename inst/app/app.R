@@ -2,7 +2,10 @@ library(shiny)
 library(shinyBS)
 library(stringr)
 library(tidyverse)
+library(dplyr)
 library(quanteda)
+library(quanteda.textstats)
+library(quanteda.textplots)
 library(wordcloud)
 library(pathways)
 
@@ -311,7 +314,11 @@ ui <- fluidPage(
 
 
 server <- function(input, output, session) {
+
+  # suppress warnings
+  storeWarn <- getOption("warn")
   options(warn = -1)
+
   Sys.setenv(LANG = "en")
 
   l_uk <- "english"
@@ -388,15 +395,17 @@ server <- function(input, output, session) {
 
     if (method == "freq") {
       Dfm <- dfm(
-        corpus,
-        remove = c(stopwords(lang), sw),
-        stem = tostem,
-        remove_twitter = FALSE,
-        #         removeSeparators=tosep,
-        remove_punct = TRUE,
-        remove_numbers = TRUE
+        tokens(corpus,
+               remove_punct = TRUE,
+               remove_numbers = TRUE)
 
       )
+
+     Dfm <- dfm_remove(Dfm, c(stopwords(lang), sw))
+
+      if(tostem == TRUE) {
+        Dfm <- dfm_wordstem(Dfm, lang)
+      }
 
       Dfm <- Dfm[, str_length(featnames(Dfm)) >= min_len]
       top50 <- topfeatures(Dfm, 160)
@@ -418,20 +427,25 @@ server <- function(input, output, session) {
       corpus_grouped <-
         corpus(str_to_lower(combined$text), docvars = combined)
       dfm_gr <- dfm(
-        corpus_grouped,
-        groups = "reference",
-        remove = c(stopwords(lang), sw),
-        stem = tostem,
-        remove_twitter = FALSE,
+        tokens(corpus_grouped,
         remove_numbers = TRUE,
-        remove_punct = TRUE
+        remove_punct = TRUE)
       )
+      dfm_gr <- dfm_group(dfm_gr, groups = reference)
+      dfm_gr <- dfm_remove(dfm_gr, c(stopwords(lang), sw) )
+      if (tostem == TRUE) {
+        dfm_gr <- dfm_wordstem(dfm_gr, c(stopwords(lang), sw))
+      }
       dfm_gr <- dfm_gr[, str_length(featnames(dfm_gr)) >= min_len]
       dfm_gr <- dfm_trim(dfm_gr, min_termfreq = 5)
-      tdm <-  textstat_keyness(dfm_gr, measure = 'chi2')   %>%
+
+      tdm <-  textstat_keyness(dfm_gr, measure = 'chi2')
+
+      tdm <- tdm %>%
         filter(chi2 > 0) %>%
         mutate(freq = chi2) %>%  select(-chi2) %>%
         rename(word = feature)
+
       tdm$color <-
         mapply(detect_keyword, tdm$word, filterwords, tostem, lang)
 

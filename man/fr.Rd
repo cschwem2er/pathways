@@ -4,7 +4,8 @@
 \name{fr}
 \alias{fr}
 \title{Pathways Corpus - France}
-\format{A data frame including the following variables:
+\format{
+A data frame including the following variables:
 \describe{
   \item{qid}{identifier of written question}
   \item{qdate}{date of written question }
@@ -15,7 +16,8 @@
   \item{text}{text of written question}
   \item{prestring}{prestring of written question}
   \item{area}{subject area of written question}
-}}
+}
+}
 \source{
 \url{http://www.assemblee-nationale.fr/}
 }

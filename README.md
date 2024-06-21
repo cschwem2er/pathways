@@ -3,8 +3,6 @@
 
 # pathways <img src="man/figures/logo.png" align="right" />
 
-[![Travis-CI Build
-Status](https://travis-ci.org/cschwem2er/pathways.svg?branch=master)](https://travis-ci.org/cschwem2er/pathways)
 [![AppVeyor Build
 Status](https://ci.appveyor.com/api/projects/status/github/cschwem2er/pathways?branch=master&svg=true)](https://ci.appveyor.com/project/cschwem2er/pathways)
 [![CRAN
@@ -15,6 +13,12 @@ studying the political representation of Citizens of Immigrant Origin.
 It includes parliamentary written questions from democracies of eight
 European countries: Belgium, France, Germany, Greece, Italy,
 Netherlands, Spain, and the United Kingdom.
+
+## No active maintenance
+
+Please note that this packages is not actively maintained any longer.
+The datasets will be functional in the future, but the corpus explorer
+may not work anymore.
 
 ## How to Install
 
@@ -33,7 +37,7 @@ is being prepared.
 This package includes all datasets of the Pathways Corpus:
 
 | name | country        | term      |
-| :--- | :------------- | :-------- |
+|:-----|:---------------|:----------|
 | be   | Belgium        | 2010-2014 |
 | de   | Germany        | 2009-2013 |
 | el   | Greece         | 2015      |
@@ -64,7 +68,5 @@ A reference for the Pathways Corpus is currently in preparation. For
 now, please cite the following reference if you use this package for
 your publications:
 
-``` 
-  Carsten Schwemmer (2019). pathways: A 'Shiny' Application for Exploring the Pathways Corpus. R package version 1.0.2.
-  https://github.com/cschwem2er/pathways
-```
+      Carsten Schwemmer (2019). pathways: A 'Shiny' Application for Exploring the Pathways Corpus. R package version 1.0.2.
+      https://github.com/cschwem2er/pathways

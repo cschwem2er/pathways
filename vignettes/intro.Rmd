@@ -19,6 +19,10 @@ knitr::opts_chunk$set(
 
 This app enables interactive exploration of the **Pathways Corpus** for studying the political representation of Citizens of Immigrant Origin. It includes parliamentary written questions from democracies of eight European countries: Belgium, France, Germany, Greece, Italy, Netherlands, Spain, and the United Kingdom.
 
+## No active maintenance
+
+Please note that this packages is not actively maintained any longer. The datasets will be functional in the future, but the corpus explorer may not work anymore.
+
 ## How to Install
 
 You can download and install the latest development version of the app with the devtools package by running ``devtools::install_github('cschwem2er/pathways')``.    

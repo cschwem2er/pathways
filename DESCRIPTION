@@ -1,8 +1,8 @@
 Package: pathways
 Type: Package
 Title: A 'Shiny' Application for Exploring the Pathways Corpus
-Version: 1.0.2
-Date: 2019-05-26
+Version: 1.0.3
+Date: 2024-06-21
 Authors@R: person("Carsten", "Schwemmer", email = "c.schwem2er@gmail.com", comment = c(ORCID = "0000-0001-9084-946X"), role = c("aut", "cre"))
 URL: https://github.com/cschwem2er/pathways
 BugReports: https://github.com/cschwem2er/pathways/issues
@@ -10,18 +10,20 @@ Description: This app enables interactive exploration of the Pathways Corpus for
 Depends: 
           R (>= 3.2.0)
 Imports:
-          quanteda (>= 1.3.0),
-          shiny (>= 1.3.0),
+          quanteda (>= 4.0.0),
+          quanteda.textstats (>= 0.94.0),
+          quanteda.textplots (>= 0.94.0),
+          shiny (>= 1.8.0),
           shinyBS (>= 0.6.0),
-          purrr (>= 0.3.0),
-          dplyr(>= 0.8.0),
+          purrr (>= 1.0.0),
+          dplyr(>= 1.1.0),
           wordcloud (>= 2.6.0),
-          stringr (>= 1.4.0)
+          stringr (>= 1.5.0)
 Suggests: 
           knitr,
           rmarkdown         
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
-RoxygenNote: 6.1.1
+RoxygenNote: 7.2.3
 VignetteBuilder: knitr

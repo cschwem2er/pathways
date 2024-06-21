@@ -4,7 +4,8 @@
 \name{es}
 \alias{es}
 \title{Pathways Corpus - Spain}
-\format{A data frame including the following variables:
+\format{
+A data frame including the following variables:
 \describe{
   \item{qid}{identifier of written question}
   \item{qdate}{date of written question }
@@ -15,7 +16,8 @@
   \item{text}{text of written question}
   \item{prestring}{prestring of written question}
   \item{contributors}{names of other MPs}
-}}
+}
+}
 \source{
 \url{http://www.congreso.es/}
 }
